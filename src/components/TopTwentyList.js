@@ -7,9 +7,18 @@ render(){
 
   const topTwentyItemNodes = this.props.topTwenty.map(topTwentyItem => {
     return(
-    <TopTwentyItem song={topTwentyItem["im:name"].label}> </TopTwentyItem>
+      <div className="top-twenty-list">
+    <TopTwentyItem
+    song={topTwentyItem["im:name"].label} artist={topTwentyItem["im:artist"].label}
+    cover={topTwentyItem["im:image"][2].label}
+    releaseDate={topTwentyItem["im:releaseDate"].attributes.label}
+    preview={topTwentyItem["link"][1].attributes.href}
+    >
+    </TopTwentyItem>
+    </div>
   )
   })
+
 
   return(
     <div className ="top-twenty-list">

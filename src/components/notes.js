@@ -7,3 +7,6 @@ const topTwentyItemNodes = this.props.topTwenty.map(topTwentyItem => {
 
 
 {topTwentyItemNodes}
+
+
+  preview={topTwentyItem["im:link"][0].attributes.href}
